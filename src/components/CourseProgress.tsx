@@ -18,8 +18,16 @@ const courses = {
     { id: 4, name: "Advanced CSS", progress: 30 },
   ],
   new: [
-    { id: 5, name: "TypeScript Fundamentals" },
-    { id: 6, name: "Node.js Basics" },
+    { 
+      id: 5, 
+      name: "TypeScript Fundamentals",
+      url: "https://junocollege.com/courses/typescript-fundamentals"
+    },
+    { 
+      id: 6, 
+      name: "Node.js Basics",
+      url: "https://junocollege.com/courses/nodejs-basics"
+    },
   ],
 };
 
@@ -88,9 +96,15 @@ export const CourseProgress = () => {
           <CardContent>
             <div className="space-y-4">
               {courses.new.map((course) => (
-                <div key={course.id} className="p-3 bg-gray-50 rounded-lg">
+                <a
+                  key={course.id}
+                  href={course.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+                >
                   <span className="font-medium">{course.name}</span>
-                </div>
+                </a>
               ))}
             </div>
           </CardContent>
