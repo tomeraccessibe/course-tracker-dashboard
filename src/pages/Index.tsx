@@ -1,6 +1,6 @@
-import { Layout } from "@/components/Layout";
 import { CourseProgress } from "@/components/CourseProgress";
 import { RecommendedCourses } from "@/components/RecommendedCourses";
+import {Layout} from "@/components/Layout.tsx";
 
 const Index = () => {
   return (
