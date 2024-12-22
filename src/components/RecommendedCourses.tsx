@@ -14,18 +14,21 @@ const recommendedCourses = [
     name: "Advanced React Patterns",
     description: "Learn advanced React patterns and best practices",
     level: "Intermediate",
+    url: "https://junocollege.com/courses/advanced-react",
   },
   {
     id: 2,
     name: "Full Stack Development",
     description: "Build full-stack applications with modern technologies",
     level: "Advanced",
+    url: "https://junocollege.com/courses/full-stack",
   },
   {
     id: 3,
     name: "UI/UX Fundamentals",
     description: "Master the basics of user interface design",
     level: "Beginner",
+    url: "https://junocollege.com/courses/ui-ux",
   },
 ];
 
@@ -45,9 +48,11 @@ export const RecommendedCourses = () => {
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
                   <span className="text-sm text-gray-500">Level: {course.level}</span>
-                  <Button variant="outline" size="sm">
-                    <span>Learn More</span>
-                    <ArrowRight className="w-4 h-4 ml-2" />
+                  <Button variant="outline" size="sm" asChild>
+                    <a href={course.url} target="_blank" rel="noopener noreferrer">
+                      <span>Learn More</span>
+                      <ArrowRight className="w-4 h-4 ml-2" />
+                    </a>
                   </Button>
                 </div>
               </div>
