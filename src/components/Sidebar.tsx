@@ -3,11 +3,11 @@ import { cn } from "@/lib/utils";
 
 export const Sidebar = () => {
   return (
-    <div className="w-64 h-screen bg-white border-r border-gray-200 p-4">
+    <div className="w-70 h-screen bg-white border-r border-gray-200 p-4">
       <div className="space-y-4">
         <div className="flex items-center space-x-2 px-2 py-3">
           <BookOpen className="w-6 h-6 text-blue-600" />
-          <span className="text-lg font-semibold">Juno Learning</span>
+          <span className="text-lg font-semibold">Accessibility Awareness Training</span>
         </div>
         
         <nav className="space-y-1">
@@ -24,6 +24,7 @@ export const Sidebar = () => {
           
           <a
             href="https://juno.com/profile"
+            target='_blank'
             className={cn(
               "flex items-center space-x-2 px-2 py-2 rounded-lg",
               "text-gray-700 hover:bg-gray-100 transition-colors"

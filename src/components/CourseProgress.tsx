@@ -9,25 +9,22 @@ import {
 } from "@/components/ui/card";
 
 const courses = {
-  completed: [
-    { id: 1, name: "Web Development Fundamentals", progress: 100 },
-    { id: 2, name: "JavaScript Basics", progress: 100 },
-  ],
-  inProgress: [
-    { id: 3, name: "React Essentials", progress: 65 },
-    { id: 4, name: "Advanced CSS", progress: 30 },
-  ],
   new: [
-    { 
-      id: 5, 
-      name: "TypeScript Fundamentals",
+    { id: 5,
+      name: "Web accessibility for healthcare companies and providers: A business case",
       url: "https://junocollege.com/courses/typescript-fundamentals"
     },
-    { 
-      id: 6, 
-      name: "Node.js Basics",
-      url: "https://junocollege.com/courses/nodejs-basics"
+    { id: 6,
+      name: "The Benefits of Web Accessibility",
+      url: "https://junocollege.com/courses/typescript-fundamentals"
     },
+  ],
+  completed: [
+    { id: 1, name: "The ultimate WCAG 2.1 and 2.2 Level AA checklist", progress: 100 },
+    { id: 2, name: "What you need to know about WCAG 2.2", progress: 100 },
+  ],
+  inProgress: [
+    { id: 3, name: "Why Web Accessibility is Critical for SEO ", progress: 65 },
   ],
 };
 
@@ -46,6 +43,7 @@ export const CourseProgress = () => {
             </CardTitle>
             <CardDescription>Courses you've finished</CardDescription>
           </CardHeader>
+
           <CardContent>
             <div className="space-y-4">
               {courses.completed.map((course) => (
@@ -69,6 +67,7 @@ export const CourseProgress = () => {
             </CardTitle>
             <CardDescription>Courses you're taking</CardDescription>
           </CardHeader>
+
           <CardContent>
             <div className="space-y-4">
               {courses.inProgress.map((course) => (
@@ -93,18 +92,19 @@ export const CourseProgress = () => {
             </CardTitle>
             <CardDescription>Start these courses next</CardDescription>
           </CardHeader>
+
           <CardContent>
             <div className="space-y-4">
               {courses.new.map((course) => (
-                <a
-                  key={course.id}
-                  href={course.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
-                >
-                  <span className="font-medium">{course.name}</span>
-                </a>
+                  <a
+                      key={course.id}
+                      href={course.url}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="block p-3 bg-gray-50 rounded-lg hover:bg-gray-100 transition-colors"
+                  >
+                    <span className="line-clamp-2 font-medium">{course.name}</span>
+                  </a>
               ))}
             </div>
           </CardContent>
