@@ -41,7 +41,7 @@ export const CourseProgress = () => {
               <Check className="w-5 h-5 text-green-500" />
               <span>Completed</span>
             </CardTitle>
-            <CardDescription>Courses you've finished</CardDescription>
+            <CardDescription>Courses finished</CardDescription>
           </CardHeader>
 
           <CardContent>
@@ -65,7 +65,7 @@ export const CourseProgress = () => {
               <Clock className="w-5 h-5 text-blue-500" />
               <span>In Progress</span>
             </CardTitle>
-            <CardDescription>Courses you're taking</CardDescription>
+            <CardDescription>Courses taking</CardDescription>
           </CardHeader>
 
           <CardContent>
